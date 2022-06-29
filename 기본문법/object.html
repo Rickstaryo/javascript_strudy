@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //  Restfull APi json
+        //  {name: value};
+        let person = {
+            firstName : "길동",
+            lastName: "홍"
+        }
+        console.log(person);
+        
+        // properties 추가, 변경
+        //  점과 프러퍼티를 사용
+        person.id =100;
+        console.log(person);
+        person.firstName = "길순";
+        console.log(person);
+        // 대괄호를 사용
+        person['lastName'] = "김"
+        console.log(person);
+
+        // 변수를 사용
+        let varName = "firstName";
+        person[varName] = "개똥";
+        console.log(person);
+
+
+        // this 는 object를 뜻한다
+        person.fullName = function(){
+            return this.firstName + " " + this.lastName;
+        }
+        console.log(person.fullName());
+        // 함수이기 때문에 ()를 열고 닫아주어야 한다. 
+
+        let sports = {
+            football : "축구",
+            baseball: "야구"
+        }
+        for(var item in sports){
+            console.log(item);
+            console.log(sports[item]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

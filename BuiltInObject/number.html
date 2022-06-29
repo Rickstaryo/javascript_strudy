@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <Script>
+        /*
+        Built-in Object
+        number, String , Object , Function, Global, Array,
+        Boolean, Json, date, math
+
+        */
+       /*
+        Number()
+        1. 파라미터 값을 Number타입으로 반환
+        2. 파라미터 값이 String 타입이라도 값이 숫자이면 변환 가능
+        3. 파라미터 값을 작성하지 않으면 0을 반환한다
+        4. boolean도 값이나온다
+       */
+    console.log(typeof(Number("10")));
+    console.log(Number(" 10 ")); // 공백을 넣고 값이 숫자인경우 반환한다
+    console.log(Number(true));  // 1로
+    console.log(Number(false)); // 0으로 나온다
+    console.log(Number("10.33"));
+    console.log(Number("10,33")); // NAN으로 나온다
+    
+    var obj = new Number("123");
+    console.log(obj); //Number {123}으로나온다
+
+    let x = 123;
+    // Valueof(): Number 인스턴스의 프리미티브값을 반환
+    console.log(x.valueOf());
+
+    // toString : 데이터를 String 타입으로반환
+    console.log(typeof(x.toString()));
+    // toPercision 지정된 길이로 숫자를 문자열로 변환
+    x = 1.234;
+    console.log(x.toPrecision());
+    console.log(x.toPrecision(6)) //1.23400
+
+
+
+
+
+    </Script>
+</head>
+<body>
+    
+</body>
+</html>

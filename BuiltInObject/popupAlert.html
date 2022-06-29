@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function showAlert(msg){
+            alert(msg);
+        }
+        function showConfirm(msg){
+            confirm(msg)
+        }
+        function showPrompt(msg){
+            console.log(prompt(msg));
+        }
+        function myTimeout(){
+            alert("hello world");
+        }
+        function myTimer(){
+            let d = new Date();
+            // console.log(d.toLocaleTimeString());
+            document.getElementById("time").innerHTML= d.toLocaleTimeString();
+        }
+    </script>
+</head>
+<body>
+    <a href="javascript:showAlert('전달된 메세지 \n 라인변경')">alert</a>
+    <a href="javascript:showConfirm('전달된 메세지')">showConfirm</a>
+    <a href="javascript:showPrompt('입력해주세요')">showConfirm</a>
+    <a href="javascript:setTimeout(myTimeout,3000)">myTimeout</a>
+    <a href="javascript:setInterval(myTimer,1000)">myTimer</a>
+
+    <div id="time"></div>
+
+</body>
+</html>

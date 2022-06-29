@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    // 자바스크립트 데이터타입 
+    /*Primitive type:  number,string, undifined (할당되지않은값
+,null, boolean , object
+        
+    var , let, const*/
+//    Var: 간단한 테스트에서 사용, 같은 변수를 선언해도 에러가 나지지않음
+    var a = "hello";
+    var a = "world";
+    var b;
+    document.write(a);
+    //  It's not the error in javaScript 
+    console.log(a);
+
+//  Let:값을 재선언 할수없다.
+let x = "홍길동";
+console.log(x);
+
+// const: 상수 변수를 재선언하거나 값을 재할당 할 수 없다
+const PI =3.141592;
+console.log(PI);
+// PI = 1.24;
+
+//정리 
+/*
+    var: 테스트 용도 
+    let: 값이 재할당이 필요한 경우
+    const: 재할당이 필요없는 상수
+*/
+
+let c =123;
+console.log(c);
+console.log(typeof(c));
+
+c = -123;
+console.log(typeof(c));
+c = 1*"A";
+console.log(c); // NaN NOT A NUMBER 즉 
+
+
+//  String : 문자열 큰따옴표와 작은 따옴표 사이에 작성
+let str = "ABC";
+console.log(str);
+console.log(typeof(str));
+
+str = "123";
+console.log(str);
+console.log(typeof(str));
+
+
+// null 
+let n = null;
+console.log(n);
+console.log(typeof(n));
+
+//Boolean 
+let t = true;
+console.log(t);
+console.log(typeof(t));
+t= 5< 2;
+console.log(t);
+
+//  Object : {name: value}형태
+let obj = {
+    name : "홍길동",
+    age : 30
+};
+console.log(obj);
+console.log(typeof(obj));
+
+</script>
+<body>
+    
+</body>
+</html>

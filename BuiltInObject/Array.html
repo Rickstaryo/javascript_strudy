@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        let array1 =[];
+        let array2 = Array();
+        console.log(new Array());
+
+        // length 배열의 길이를 반환
+        let fruit =["Banana", "Apple", "Orange", "Mango"];
+        console.log(fruit.length);
+        // element를 보고싶다
+        console.log(fruit[0]);
+
+        let str ="";
+
+        // 전체식으로 해도 가능하다 
+        for (var i =0; i<fruit.length; i++){
+            console.log(fruit[i]);
+            let element = "<li>" +fruit[i] + "</li>";
+            str += element;
+        }
+        console.log(str);
+        // document.getElementById("fruit").innerHTML= "fruit";
+        function Inputelment(){
+            document.getElementById("fruit").innerHTML = "<ul>" + str + "</ul>";
+        }
+        // Build up the javaScript to HTML
+
+
+        //push(): 배열의 요소를 추가
+        fruit.push("lemon");
+        console.log(fruit);
+        fruit[fruit.length]= "peach";
+        console.log(fruit);
+        //pop ()
+        fruit.pop();
+        console.log(fruit);
+
+        // sort():배열을 정렬기준은 유니콛 값 기준 
+        let array3 =[4,1,7,5]; 
+        array3.sort();
+        console.log(array3);
+
+        //그래서 정렬이 안됨
+        let array4 = ["1", "11", "9","10"];
+        array4.sort();
+        console.log(array4);
+
+        // Reverse()
+        array3.reverse();
+        console.log(array3);
+    </script>
+</head>
+<body onload="Inputelment()">
+    <div id="fruit"></div>
+</body>
+</html>

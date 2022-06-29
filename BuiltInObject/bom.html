@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+
+        /*
+        Bom : Browser Object Model
+        1.Window
+        2.Location
+        3.Screen
+        4.History
+        5.Navigatoe
+        6.popup
+        7.Time
+        8.Cookies
+        
+        */
+        let width, height;
+        width= window.innerWidth;
+        height= window.innerHeight;
+        console.log("width: "+ width);
+        console.log("heigth: " + height);
+    
+        function winpop(){
+            console.log("함수실행");
+            window.open("child.html", "_blank", "width =200, height=200,scroll=no");
+        }
+    </script>
+</head>
+<body>
+    <a href="javascript:winpop()">child.html로이동하기</a>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        console.log(new String());// 지향하지않음
+        let txt = "ABCDEFGHIJKLMNOP";
+        console.log(txt);
+        console.log(txt.length);
+
+        //slice(): 시작에서 끝 직전까지의 값을 반환한다
+        let str = "Apple, Banana, Kiwi"
+        console.log(str.slice(0,5)); // apple
+        console.log(str.slice(7)); // banana 7번째부터 끝까지 해버린다
+
+        // substring : slice 와 비슷하지만 0보다 작은 값은 0으로 취급한다.
+        console.log(str.substring(0,5));
+
+        //substr():slice()와 비슷한데, 두번째 파라미터는 길이를 뜻한다
+        console.log(str.substr(7,6));
+
+        // replace():매칭되는 문자열을 변경
+        let text = "안녕하세요 guest님";
+        let newText = text.replace("guest", "홍길동");
+        let newText2 = text.replaceAll("guildong");
+        console.log(text);
+        console.log(newText);
+
+
+        // ToUpperCase():대문자로 변경
+        let text1 = "Hello World"
+        console.log(text1.toUpperCase());
+        // ToLowerCase():소문자로 변경
+        console.log(text1.toLowerCase());
+
+
+        // let input = prompt("Y/y를 입력하세요");
+        // console.log("input" + input);
+
+        // if(input.toUpperCase()=='Y') {
+        //     alert("Y를 입력했습니다.");
+        // }
+        // else{
+        //     alert("다른 문자를 입력했습니다.");
+        // }
+
+        //concat():문자열 합치기
+        let text3 ="Hello"
+        let text4 ="world"
+        console.log(text3.concat("",text4));
+
+
+        // trim(): 공백을 제거
+        let text5 = "   Hello World   ";
+        console.log(text5.length);
+        console.log(text.trim().length);
+
+
+        function idCheck(){
+            alert("idCheck 함수실행")
+            let id = document.getElementById("id").value;
+            alert(id);
+            console.log("id의 길이:"+ id.length);
+            console.log("공백을 제거한 id 길이" + id.trim().length);
+        }
+
+
+        // Split() 구분자를 기준으로 배열로 변환
+        let text6 ="A,B,C,D,E";
+        console.log(text6);
+        console.log(text6.split(","));
+    // charAt(index): index에 해당하는 문자를 반환
+    // indexof("문자열"): 첫번째로 일치하는 index삾을 반환
+    // lastindexOf("문자열"): 마지막으로 일치하는 index값을 반환 
+
+</script>
+</head>
+<body>
+    ID:<input type="text" name="id" id="id">
+    PW<input type="password" name="password" id="password">
+    <button onclick="idCheck()">전송</button>
+</body>
+</html>

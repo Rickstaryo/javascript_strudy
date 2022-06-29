@@ -1,0 +1,19 @@
+Stack
+last in frist our
+1 2 3 4
+스택 1-> 2-> 3->4
+
+IP주소 
+-공인 IP
+- 사설IP
+
+ISP(KT<SKT<LG) -> 셋톱박스-> 공유기
+0.0.0.0-> 255.255.255.255
+IPv4
+유동Ip
+
+Hyper Text Transfer protocol
+FTP(file transfer protocol)21
+ssh 22
+DNS(domain Name Service)
+port(localhost:1521)
