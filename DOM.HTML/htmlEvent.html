@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function changeStyle(){
+            document.getElementById("div2").style.backgroundColor="yellow";
+        }
+        function toggleDiv(){
+            // document.getElementById("div3").style.display="block"
+            // 왓다갔다 할려면 해야한다
+            console.log(document.getElementById("div3").style.display);
+            if(document.getElementById("div3").style.display== "none"){
+                document.getElementById("div3").style.display ="block";
+            }
+            else{
+                document.getElementById("div3").style.display= "none"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <div id="div3" style="background-color: pink; display:none;">div3</div>
+    <button onclick="changeStyle()">색깔 바꾸기</button>
+    <button onclick="toggleDiv()">토글</button>
+</body>
+</html>

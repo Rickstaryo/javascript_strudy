@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        // Before Website take away the info took it
+        function formCheck(){
+            // alert("formCheck 함수실행")
+            // console.log(document.getElementById("txt1").value);
+            //Validation
+
+            // Text1 only input number
+            // let txt1= document.getElementById("txt1").value;
+            // console.log(txt1);
+            // console.log(typeof(txt1));
+            // console.log(isNaN(txt1));
+            // if(isNaN(txt1)){
+            //     alert("숫자를 입력해주세요")
+            // }
+            // //txt2공백을 넣을수없다
+            // let txt2 = document.getElementById("txt2").value;
+            // console.log("txt2:" + txt2);
+            // if(txt2.length<1){
+            //     alert("공백을 넣을수 없습니다.");
+            // }
+            // //txt3dms 숫자는 1~10사이만 입력을 가능하다
+            // let txt3 = document.getElementById("txt3")[0].value;
+            // console.log("txt3:" + txt3);
+            // if(isNaN(txt3)||txt3.length>10 || txt3.length<1)
+            // {
+            //     alert("숫자는 1과 10사이만 입력이 가능합니다.")
+            // }
+
+            // radio Checker
+            console.log(document.getElementsByName("radio"));
+
+            // #1 DO they chose the button?
+            console.log(document.getElementsByName("radio")[0].checked);
+            console.log(document.getElementsByName("radio")[1].checked);
+
+            // 체크박스
+            console.log(document.getElementsByName("check"));
+            let check= document.getElementsByName("check");
+                for(var i =0; i<check.length; i++){
+                    if(check[i].checked ==true){
+                        console.log(check[i].id);
+                    }
+                    console.log(check[i].checked);
+                }
+                
+                //셀렉트박스
+                console.log(document.getElementById("select").value);
+                document.getElementById("select").value ="val3";
+                return false; //
+        }
+
+        function resetform(){
+            // alert("resetFrom 함수실행")
+            let radio =  document.getElementsByName("radio");
+            let check = document.getElementsByName("check");
+            for(var i =0 ; i<radio.length; i++){
+                if(radio[i].checked){
+                    document.getElementsByName("radio")[i].checked=false;
+                }
+            }
+            for(var i =0 ; i<radio.length; i++){
+                if(check[i].checked){
+                    document.getElementsByName("check")[i].checked=false;
+                }
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <form action="#" name="myForm" method="get" onsubmit="return formCheck()">
+        TEXT1<input type="text" name="txt1" id="txt1" ><br>
+        TEXT2<input type="text" name="txt2" id="txt2" ><br>
+        TEXT3<input type="number"name="txt3" id="txt3" ><br>
+        라디오<input type="radio"name="radio" id="radio1">
+        라디오2<input type="radio"name="radio" id="radio2"><br>
+        <input type="submit" value="확인"><br><br>
+
+        체크박스1<input type="checkbox" name="check" id="check1">
+        체크박스2<input type="checkbox" name="check" id="check2">
+        체크박스3<input type="checkbox" name="check" id="check3">
+        체크박스4<input type="checkbox" name="check" id="check4"> <br>
+
+        선택박스
+        <select name="select" id="select">
+            <option value="val1">선택1</option>
+            <option value="val2">선택2</option>
+            <option value="val3">선택3</option>
+        </select><br>
+
+        <input type="submit" value="확인">
+        <input type="reset" value="취소"> 
+        <!-- 리셋 버튼 이 있음 
+            -->
+
+        <!-- readonly: read만 
+        value -->
+        <!-- http://127.0.0.1:5500/DOM.HTML/HtmlForm.html?txt1=abcd&txt1=abcd# -->
+        <!--  : port key / path of document/ ?-->
+        <!-- ? 란 데이터의 묶음이다  -->
+        <!-- <form action=http://www.naver.com" name="myForm" method="get"> -->
+        <!-- URL이 보낸 자료를 볼수없기 때문에 payroad -->
+
+        <!--2. 원하지않는다면 form 을 Submmit 시키지않는것 -->
+        
+        <!-- onclick은 javaScript form을 찾을수 있다  -->
+    </form>
+    <button onclick="resetform()">초기화</button>
+</body>
+</html>
